@@ -13,6 +13,7 @@ type User struct {
 	Subscribe  string    `json:"subscribe" form:"subscribe" gorm:"type: varchar(255)"`
 	StatusUser string    `json:"status_user" form:"status_user" gorm:"type: varchar(255)"`
 	Role       string    `json:"role" gorm:"type: varchar(255)"`
+	DueDate    time.Time `json:"due_date" form:"due_date"`
 	CreatedAt  time.Time `json:"-"`
 	UpdatedAt  time.Time `json:"-"`
 }

@@ -52,6 +52,7 @@ func (r *repository) UpdateTransaction(status string, orderId int) (models.Trans
 		var user models.User
 		r.db.First(&user, transaction.UserID)
 		user.StatusUser = "active"
+		user.DueDate = transaction.DueDate
 		r.db.Save(&user)
 	}
 
